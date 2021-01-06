@@ -5,22 +5,47 @@
   font-size: 18px;
   align-items: center;
   text-align: center;
+  flex: auto;
 }
 h1{
-  color: white
+  margin-top: 5%;
+  margin-bottom: 5%;
+  color: white;
+  font-size:xx-large;
 }
-input {
-  border: none;
-  border-radius: 15px;
 
+.searchBar {
+  width: 85vh;
+margin: auto}
+ input {
+  border: none;
+  border-radius: 15px 0px 0px 15px;
+  font-size: 18px;
+  width: 87%;
+  line-height: 2em;
+}
+ input::placeholder{
+  font-size: 13px;
+}
+
+ button{
+  height: 2em;
+  width: 2em;
+  margin-left: -2%;
+  border-radius: 0px 15px 15px 0px;
+  background-color: black;
+  border: none;
+  cursor: pointer;
 }
 
 #img {
   background-image: url("/images/pattern-bg.png");
-  height: 50vh;
-  width: 100vw;
+  top: 0;
+  height: 100%;
+  width: 100%;
   position: absolute;
   z-index: -1;
+  object-fit: contain;
 }
 #box {
   background-color: white;
@@ -31,6 +56,7 @@ input {
   padding-top: 5px;
   padding-bottom: 10px;
   border-radius: 15px;
+  margin: 5% auto;
 }
 #map { 
   height: 60vh;
@@ -45,11 +71,14 @@ footer{
   text-align: center;
 }
 .internalSection{
-
+  color: hsl(0, 0%, 59%);
+  padding: 10px ;
+}
+.showData {
+  color: black;
 }
 .attribution {
   font-size: 11px;
-  text-align: center;
 }
 
 .attribution a {

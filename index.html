@@ -22,32 +22,30 @@
     <div id="img"></div>
     <div id="wrapper">
       <h1>IP Address Tracker</h1>
-      <form onsubmit="return ValidateIp()" >
+      <form onsubmit="return ValidateIp()">
+        <div class="searchBar">
         <input type="text" id="input" placeholder="Search for any IP address or domain...">
         <button type="submit" id="ipaddresSubmit">
-          <svg xmlns="http://www.w3.org/2000/svg" width="11" height="14">
-            <path fill="none" stroke="#FFF" stroke-width="3" d="M2 1l6 6-6 6" />
-          </svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="11" height="14"><path fill="none" stroke="#FFF" stroke-width="3" d="M2 1l6 6-6 6" /></svg>
         </button>
+      </div>
       </form>
     </div>
   </main>
-  <aside>
     <div id="box">
       <div class="internalSection">IP ADDRESS
-        <div id="ipaddres">Loading...</div>
+        <div class="showData" id="ipaddres">Loading...</div>
       </div>
       <div class="internalSection">LOCATION
-        <div id="location">Loading...</div>
+        <div class="showData" id="location">Loading...</div>
       </div>
       <div class="internalSection">TIMEZONE
-        <div id="timezone">Loading...</div>
+        <div class="showData" id="timezone">Loading...</div>
       </div>
       <div class="internalSection">ISP
-        <div id="isp">Loading...</div>
+        <div class="showData" id="isp">Loading...</div>
       </div>
     </div>
-  </aside>
   <div id="map"></div>
 
   <footer>

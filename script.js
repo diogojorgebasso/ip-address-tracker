@@ -3,7 +3,6 @@ const PickerLocation = document.getElementById('location')
 const Pickertimezone = document.getElementById('timezone')
 const Pickerisp = document.getElementById('isp')
 const button = document.getElementById('ipaddresSubmit')
-const input = document.getElementById('input')
 var map
 findIp(fetch('https://geo.ipify.org/api/v1?apiKey=at_UoPVkEyC44YnP5UoN6xgIwrTIDln9')) //It will run on the background at the start
 
@@ -60,12 +59,20 @@ function ShowMap(lat, lng){
 }
 
 function ValidateIp(ip){
-  const regex = new RegExp('\b(?:(?:2(?:[0-4][0-9]|5[0-5])|[0-1]?[0-9]?[0-9])\.){3}(?:(?:2([0-4][0-9]|5[0-5])|[0-1]?[0-9]?[0-9]))\b')
+  const regex = RegExp('(([2]([0-4][0-9]|[5][0-5])|[0-1]?[0-9]?[0-9])[.]){3}(([2]([0-4][0-9]|[5][0-5])|[0-1]?[0-9]?[0-9]))*', 'gi')
   if (!regex.test(ip)) {
-    alert("Tem que ser um IP: XX.XXX.XX");
+    alert("Format for IP: XXX.XXX.XX.XXX");
+    return false
   }
+  console.log()
   return regex.test(ip)
 }
-button.addEventListener('mouseclick',(e)=>{
-  ValidateIp(input.value)
-} )
+button.addEventListener('click',()=>{
+  let input = document.getElementById('input').value
+  console.log(ValidateIp(input))
+  if(ValidateIp(input)){
+    console.log('I executed!')
+
+    findIp(fetch(`https://geo.ipify.org/api/v1?apiKey=at_UoPVkEyC44YnP5UoN6xgIwrTIDln9&ipAddress=${input.value}`))
+  }
+  } )
