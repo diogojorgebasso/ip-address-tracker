@@ -3,15 +3,50 @@
   margin: 0;
   font-family: 'Rubik', sans-serif;
   font-size: 18px;
-  display: flex;
   align-items: center;
+  text-align: center;
 }
-#map { height: 180px; }
+h1{
+  color: white
+}
+input {
+  border: none;
+  border-radius: 15px;
+
+}
+
+#img {
+  background-image: url("/images/pattern-bg.png");
+  height: 50vh;
+  width: 100vw;
+  position: absolute;
+  z-index: -1;
+}
 #box {
-  color: hsl(0, 0%, 17%);
+  background-color: white;
+  display: flex;
+  width: 85vw;
+  align-items: center;
+  justify-content: center;
+  padding-top: 5px;
+  padding-bottom: 10px;
+  border-radius: 15px;
+}
+#map { 
+  height: 60vh;
+  bottom: 0;
+  position: fixed;
+  width: 100vw;
+  z-index: -1;
+ }
+footer{
+  bottom: 0;
+  position: fixed;
+  text-align: center;
+}
+.internalSection{
 
 }
-
 .attribution {
   font-size: 11px;
   text-align: center;

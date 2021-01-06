@@ -14,40 +14,48 @@
   <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <title>Frontend Mentor | IP Address Tracker</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
   <main>
-  <h1>IP Address Tracker</h1>
-  <form onsubmit="" action="Handle" >
-    <input type="text" placeholder="Search for any IP address or domain...">
-    <button type="submit">
-      <svg xmlns="http://www.w3.org/2000/svg" width="11" height="14"><path fill="none" stroke="#FFF" stroke-width="3" d="M2 1l6 6-6 6"/></svg>
-    </button>
-  </form>
-  <div id="box">
-    <div class="internalSection">IP ADDRESS
-      <div id="ipaddres">Loading...</div>
+    <div id="img"></div>
+    <div id="wrapper">
+      <h1>IP Address Tracker</h1>
+      <form onsubmit="return ValidateIp()" >
+        <input type="text" id="input" placeholder="Search for any IP address or domain...">
+        <button type="submit" id="ipaddresSubmit">
+          <svg xmlns="http://www.w3.org/2000/svg" width="11" height="14">
+            <path fill="none" stroke="#FFF" stroke-width="3" d="M2 1l6 6-6 6" />
+          </svg>
+        </button>
+      </form>
     </div>
-    <div class="internalSection">LOCATION
-      <div id="location">Loading...</div>
-    </div>
-    <div class="internalSection">TIMEZONE
-      <div id="timezone">Loading...</div>
-    </div>
-    <div class="internalSection">ISP
-      <div id="isp">Loading...</div>
-    </div>
-  </div>
-  <map id="map"></map>
   </main>
+  <aside>
+    <div id="box">
+      <div class="internalSection">IP ADDRESS
+        <div id="ipaddres">Loading...</div>
+      </div>
+      <div class="internalSection">LOCATION
+        <div id="location">Loading...</div>
+      </div>
+      <div class="internalSection">TIMEZONE
+        <div id="timezone">Loading...</div>
+      </div>
+      <div class="internalSection">ISP
+        <div id="isp">Loading...</div>
+      </div>
+    </div>
+  </aside>
+  <div id="map"></div>
 
   <footer>
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-    Coded by <a href="https://github.com/diogojorgebasso">Diogo Basso</a>.
-  </div>
-  </footer> 
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a href="https://github.com/diogojorgebasso">Diogo Basso</a>.
+    </div>
+  </footer>
   <script src="script.js"></script>
 </body>
 
